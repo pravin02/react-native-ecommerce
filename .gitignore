@@ -1,0 +1,16 @@
+node_modules/**/*
+.expo/*
+npm-debug.*
+*.jks
+*.p12
+*.key
+*.mobileprovision
+
+
+HELP.md
+android/.gradle
+
+android/gradle/**/*
+android/app/build/**/*
+!android/**/src/main/**/build/
+!android/**/src/test/**/build/
