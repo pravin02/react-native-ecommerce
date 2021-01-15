@@ -26,6 +26,12 @@ var Login = /** @class */ (function (_super) {
                 react_native_1.Alert.alert('Message', "email " + _this.state.mobile);
             }
         };
+        _this.onGoogleLoginClicked = function () {
+            react_native_1.Alert.alert('Message', 'Google login yet to be implemented');
+        };
+        _this.onFacebookLoginClicked = function () {
+            react_native_1.Alert.alert('Message', 'Facebook login yet to be implemented');
+        };
         _this.state = {
             mobile: ''
         };
@@ -47,7 +53,20 @@ var Login = /** @class */ (function (_super) {
                 react_1["default"].createElement(react_native_1.TouchableOpacity, null,
                     react_1["default"].createElement(react_native_1.Text, { style: styles_1["default"].forgot }, "Forgot Password?")),
                 react_1["default"].createElement(react_native_1.TouchableOpacity, { style: styles_1["default"].btn, onPress: function () { return _this.onLoginClicked(); } },
-                    react_1["default"].createElement(react_native_1.Text, { style: styles_1["default"].txt }, "Login")))));
+                    react_1["default"].createElement(react_native_1.Text, { style: styles_1["default"].txt }, "Login")),
+                react_1["default"].createElement(react_native_1.Text, null, " --------------- OR --------------- "),
+                react_1["default"].createElement(react_native_1.TouchableOpacity, { style: styles_1["default"].googleButton, onPress: function () { return _this.onGoogleLoginClicked(); } },
+                    react_1["default"].createElement(react_native_1.Image, { style: {
+                            width: '60%', height: '60%', resizeMode: 'contain',
+                            flexWrap: 'wrap', alignContent: 'flex-start'
+                        }, source: { uri: 'https://developers.google.com/identity/images/g-logo.png' } }),
+                    react_1["default"].createElement(react_native_1.Text, { style: styles_1["default"].txt }, "Login with Google")),
+                react_1["default"].createElement(react_native_1.TouchableOpacity, { style: styles_1["default"].btn, onPress: function () { return _this.onFacebookLoginClicked(); } },
+                    react_1["default"].createElement(react_native_1.Image, { style: {
+                            width: '60%', height: '60%', resizeMode: 'contain',
+                            flexWrap: 'wrap', alignContent: 'flex-start'
+                        }, source: { uri: 'https://developers.google.com/identity/images/g-logo.png' } }),
+                    react_1["default"].createElement(react_native_1.Text, { style: styles_1["default"].txt }, "Login with Facebook")))));
     };
     return Login;
 }(react_1["default"].Component));

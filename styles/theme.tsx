@@ -8,6 +8,9 @@ const darkTheme = {
     PRIMARY_BUTTON_COLOR: '#25a540',
     PRIMARY_BUTTON_TEXT_COLOR: '#ffffff',
 
+    SECONDARY_BUTTON_COLOR: '#f95f62',
+    SECONDARY_BUTTON_TEXT_COLOR: '#ffffff',
+
     DEFAULT_FONT_SIZE: 15,
 
     DEFAULT_MARGIN: 5,

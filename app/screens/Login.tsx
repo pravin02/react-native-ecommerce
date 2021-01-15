@@ -1,9 +1,11 @@
 import React from 'react';
 
-import { TextInput, TouchableOpacity, View, Text, Alert, TouchableWithoutFeedback, Keyboard } from 'react-native';
+import { TouchableOpacity, View, Text, Alert, Image } from 'react-native';
 
 import AppStyles from '../../styles/styles';
 import TextInputView from './components/TextInputView';
+
+import googleLogo from '../assets';
 
 
 type State = {
@@ -37,6 +39,14 @@ class Login extends React.Component<Props, State> {
         }
     }
 
+    onGoogleLoginClicked = () => {
+        Alert.alert('Message', 'Google login yet to be implemented');
+    }
+
+    onFacebookLoginClicked = () => {
+        Alert.alert('Message', 'Facebook login yet to be implemented');
+    }
+
     render() {
         return (
             <>
@@ -59,6 +69,36 @@ class Login extends React.Component<Props, State> {
                         onPress={() => this.onLoginClicked()}>
                         <Text style={AppStyles.txt}>
                             Login
+                      </Text>
+                    </TouchableOpacity>
+
+                    <Text> --------------- OR --------------- </Text>
+
+
+                    <TouchableOpacity style={AppStyles.googleButton}
+                        onPress={() => this.onGoogleLoginClicked()}>
+                        <Image
+                            style={{
+                                width: '60%', height: '60%', resizeMode: 'contain',
+                                flexWrap: 'wrap', alignContent: 'flex-start'
+                            }}
+                            source={{ uri: 'https://developers.google.com/identity/images/g-logo.png' }} />
+                        <Text style={AppStyles.txt}>
+                            Login with Google
+                      </Text>
+                    </TouchableOpacity>
+
+
+                    <TouchableOpacity style={AppStyles.btn}
+                        onPress={() => this.onFacebookLoginClicked()}>
+                        <Image
+                            style={{
+                                width: '60%', height: '60%', resizeMode: 'contain',
+                                flexWrap: 'wrap', alignContent: 'flex-start'
+                            }}
+                            source={{ uri: 'https://developers.google.com/identity/images/g-logo.png' }} />
+                        <Text style={AppStyles.txt}>
+                            Login with Facebook
                       </Text>
                     </TouchableOpacity>
                 </View>

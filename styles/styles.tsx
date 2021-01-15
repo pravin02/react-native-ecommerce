@@ -42,7 +42,19 @@ const AppStyles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         marginTop: 20,
-        marginBottom: 10
+        marginBottom: 10,
+        flexDirection: 'column'
+    },
+    googleButton: {
+        width: '80%',
+        backgroundColor: theme.SECONDARY_BUTTON_COLOR,
+        borderRadius: 5,
+        height: 50,
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginTop: 20,
+        marginBottom: 10,
+        flexDirection: 'column'
     },
     txt: {
         textTransform: 'capitalize',
